@@ -33,7 +33,7 @@ module.exports = function(app) {
       // get and return all the todos after deleting
       Todo.find(function(err, todos) {
         if (err) return res.send(err)
-        res.json(todo);
+        res.json(todos);
       })
     })
   })

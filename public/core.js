@@ -12,7 +12,7 @@ function mainController($scope, $http) {
     .error(function(data){
       console.log('Error: ' + data)
     })
-    
+
   // when submitting the add form, send the text to the node API
   $scope.createTodo = function() {
     $http.post('/api/todos', $scope.formData)
@@ -28,7 +28,7 @@ function mainController($scope, $http) {
 
   // delete a todo after checking it
   $scope.deleteTodo = function(id) {
-    $http.delete('/api/todos' + id)
+    $http.delete('/api/todos/' + id)
       .success(function(data) {
         $scope.todos = data
         console.log(data)
