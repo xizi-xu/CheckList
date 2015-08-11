@@ -20,7 +20,7 @@ app.use(methodOverride())
 
 // define model
 var Todo = mongoose.model('Todo', {
-  text: String;
+  text: String
 })
 
 //routes - api
@@ -35,7 +35,7 @@ app.get('/api/todos', function(req, res) {
 // create todo and send back all todos after creation
 app.post('/api/todos', function(req, res) {
   Todo.create({
-    text.req.body.text,
+    text: req.body.text,
     done: false
   }, function(err, todo) {
     if (err) res.send(err)
