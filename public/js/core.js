@@ -1,1 +1,1 @@
-angular.module('TodoList', ['todoController', 'todoService'])
+angular.module('checkListApp', ['todoController', 'todoService']);
